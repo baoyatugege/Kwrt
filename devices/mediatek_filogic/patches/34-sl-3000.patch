@@ -118,7 +118,7 @@
 +			echo "MacAddress=$b1mac" >> ${b1dat}
 +		fi
 +		;;
-+        kst,wf3000a|\
++	kst,wf3000a|\
 +	newland,nl-wr8103)
 +		local wifi_mac=$(mtd_get_mac_binary Factory 0x4)
 +		lan_mac=$(macaddr_add $wifi_mac -1)
