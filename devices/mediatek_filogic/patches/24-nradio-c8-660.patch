@@ -105,7 +105,7 @@ diff --git a/target/linux/mediatek/image/filogic.mk b/target/linux/mediatek/imag
 index e99d944a8603c..0275e25b974db 100644
 --- a/target/linux/mediatek/image/filogic.mk
 +++ b/target/linux/mediatek/image/filogic.mk
-@@ -1237,6 +1237,37 @@ define Device/nokia_ea0326gmp
+@@ -1237,6 +1237,35 @@ define Device/nokia_ea0326gmp
  endef
  TARGET_DEVICES += nokia_ea0326gmp
  
@@ -134,9 +134,7 @@ index e99d944a8603c..0275e25b974db 100644
 +	kmod-usb-serial-option kmod-usb-net-cdc-ether kmod-usb-net-qmi-wwan \
 +	kmod-usb3
 +  IMAGE_SIZE := 131072k
-+  IMAGES += factory.bin
-+  IMAGE/factory.bin := append-ubi | check-size $$$$(IMAGE_SIZE)
-+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
++  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata | check-size
 +endef
 +TARGET_DEVICES += nradio_c8-668gl
 +
