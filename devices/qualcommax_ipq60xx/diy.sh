@@ -4,9 +4,6 @@ shopt -s extglob
 
 SHELL_FOLDER=$(dirname $(readlink -f "$0"))
 
-
-rm -rf devices/common/patches/{wifi-scripts.patch,curl.patch}
-
 wget -N https://raw.githubusercontent.com/openwrt/openwrt/refs/heads/openwrt-24.10/target/imagebuilder/files/Makefile -P target/imagebuilder/files/
 wget -N https://raw.githubusercontent.com/openwrt/openwrt/refs/heads/openwrt-24.10/package/base-files/files/sbin/sysupgrade -P package/base-files/files/sbin/
 wget -N https://github.com/openwrt/openwrt/raw/refs/heads/openwrt-24.10/package/network/config/firewall/Makefile -P package/network/config/firewall/
